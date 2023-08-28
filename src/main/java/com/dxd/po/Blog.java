@@ -20,10 +20,13 @@ public class Blog {
     private String title;
     private String content;
     private String firstPicturePath;
-    private String tag;
+    private String flag;
     private Integer numberOfViews;
     //赞赏开启
     private boolean appreciateFlag;
+
+
+
     //版权申明
     private boolean copyrightFlag;
     //评论开启
@@ -48,9 +51,19 @@ public class Blog {
     @OneToMany(mappedBy = "blog")
     private List<Comment> comments=new ArrayList<>();
 
+    @Transient
+    private String tagIds;
+
+    private String description;
     public Blog() {
     }
+    public String getFlag() {
+        return flag;
+    }
 
+    public void setFlag(String flag) {
+        this.flag = flag;
+    }
     public Long getId() {
         return id;
     }
@@ -67,14 +80,6 @@ public class Blog {
         this.title = title;
     }
 
-    public String getTag() {
-        return tag;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
     public Integer getNumberOfViews() {
         return numberOfViews;
     }
@@ -85,6 +90,22 @@ public class Blog {
 
     public boolean isAppreciateFlag() {
         return appreciateFlag;
+    }
+
+    public String getTagIds() {
+        return tagIds;
+    }
+
+    public void setTagIds(String tagIds) {
+        this.tagIds = tagIds;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public void setAppreciateFlag(boolean appreciateFlag) {
@@ -194,15 +215,21 @@ public class Blog {
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", firstPicturePath='" + firstPicturePath + '\'' +
-                ", tag='" + tag + '\'' +
+                ", flag='" + flag + '\'' +
                 ", numberOfViews=" + numberOfViews +
                 ", appreciateFlag=" + appreciateFlag +
                 ", copyrightFlag=" + copyrightFlag +
                 ", commentFlag=" + commentFlag +
                 ", publish='" + publish + '\'' +
                 ", recommend=" + recommend +
-                ", createTime='" + createTime + '\'' +
-                ", updateTime='" + updateTime + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", type=" + type +
+                ", tags=" + tags +
+                ", user=" + user +
+                ", comments=" + comments +
+                ", tagIds='" + tagIds + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
