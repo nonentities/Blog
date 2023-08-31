@@ -15,6 +15,9 @@ public interface TypeService {
     Type getTypeByName(String name);
 
     List<Type> listType();
+
+    List<Type> listTypeTop(Integer size);
+
     //分页查询
     Page<Type> listType(Pageable pageable);
     //修改
