@@ -52,7 +52,7 @@
 							<div class="ui padded vertical segment m-padded-tb-large" th:each="blog : ${page.content}">
 								<div class="ui middle aligned mobile reversed stackable grid" >
 									<div class="eleven wide column">
-										<h3 class="ui header"><a href="#" class="m-black" th:herf="@{/blog/{id}(id=${blog.id})}" target="_blank" th:text="${blog.title}">你真正理解什么是财富吗？</a></h3>
+										<h3 class="ui header"><a href="#" class="m-black" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" th:text="${blog.title}">你真正理解什么是财富吗？</a></h3>
 										<p class="m-text" th:text="|${blog.description}......|">李嘉诚香港7折抛售房产”引发热议。而长实集团旗下位于北京的豪宅项目也将迎来入市，相关人员透露，项目取消验资，取证价比吹风价低一成。</p>
 										<div class="ui grid">
 											<div class="eleven wide column">

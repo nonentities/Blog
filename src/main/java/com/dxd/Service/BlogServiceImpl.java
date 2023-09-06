@@ -4,6 +4,7 @@ import com.dxd.Dao.BlogRepository;
 import com.dxd.NotFoundException;
 import com.dxd.po.Blog;
 import com.dxd.po.Type;
+import com.dxd.util.MarkdownUtils;
 import com.dxd.util.MyBeanUtils;
 import com.dxd.vo.BlogQuery;
 import org.springframework.beans.BeanUtils;
@@ -37,6 +38,19 @@ public class BlogServiceImpl implements Blogservice{
     }
 
     @Override
+    public Blog getAndConvert(Long id){
+        Blog blog=blogRepository.findOne(id);
+        if (blog==null){
+            throw new  NotFoundException("博客不存在");
+        }
+        Blog b=new Blog();
+        BeanUtils.copyProperties(blog,b);
+        String content=b.getContent();
+        b.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        return b;
+    }
+
+    @Override
     public Page<Blog> listBlog(Pageable pageable, BlogQuery blog) {
 
         return (Page<Blog>) blogRepository.findAll(new Specification<Blog>(){
@@ -58,6 +72,14 @@ public class BlogServiceImpl implements Blogservice{
             }
         },pageable);
     }
+
+
+    @Override
+    public Page<Blog> listBlog(String query,Pageable pageable){
+
+        return blogRepository.findByQuery(query,pageable);
+    }
+
 
     @Override
     public Page<Blog> listBlog(Pageable pageable){

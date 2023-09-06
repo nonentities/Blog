@@ -8,3 +8,6 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+
+comment.avatar: /img/微信图片_20230815223846.jpg
