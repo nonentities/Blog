@@ -17,6 +17,8 @@ public interface Blogservice {
 
     Page<Blog> listBlog(Pageable pageable);
 
+    Page<Blog> listBlog(Long tagID,Pageable pageable);
+
     Page<Blog> listBlog(String query ,Pageable pageable);
 
 
