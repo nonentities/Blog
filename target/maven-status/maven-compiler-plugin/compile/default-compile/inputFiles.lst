@@ -4,6 +4,7 @@ D:\others\研1\Java学习\blog\src\main\java\com\dxd\vo\BlogQuery.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\Service\TagService.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\util\MarkdownUtils.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\NotFoundException.java
+D:\others\研1\Java学习\blog\src\main\java\com\dxd\web\TagShowController.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\web\admin\LoginController.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\Dao\CommentRepository.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\po\Blog.java
@@ -22,13 +23,16 @@ D:\others\研1\Java学习\blog\src\main\java\com\dxd\web\IndexController.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\Dao\TypeRepository.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\Service\UserService.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\util\MD5Utils.java
+D:\others\研1\Java学习\blog\src\main\java\com\dxd\web\ArchivesShowController.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\po\User.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\web\admin\TypeController.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\Interceptor\LoginInterceptor.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\Service\UserServiceImpl.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\po\Type.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\handler\ControllerExceptionHandler.java
+D:\others\研1\Java学习\blog\src\main\java\com\dxd\web\TypeShowController.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\Service\CommentServiceImpl.java
+D:\others\研1\Java学习\blog\src\main\java\com\dxd\web\AboutShowController.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\po\Tag.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\Service\CommentService.java
 D:\others\研1\Java学习\blog\src\main\java\com\dxd\Service\Blogservice.java

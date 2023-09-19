@@ -106,7 +106,8 @@ body{
 /* shadow */
 .m-shadow-small{
 	-webkit-box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
-	box-shadow: 0 4 px 8px rgba(0,0,0,0.2) !important;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+	/*box-shadow: 0 4 px 8px rgba(0,0,0,0.2) !important;*/
 }
 
 /* postion */
@@ -155,6 +156,6 @@ body{
 		padding-right: 0 !important;
 	}
 	.m-mobile-wide{
-		width: 100%;
+		width: 100% !important;
 	}
 }

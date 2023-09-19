@@ -1,6 +1,7 @@
 com\dxd\NotFoundException.class
 com\dxd\Service\BlogServiceImpl.class
 com\dxd\aspect\LogAspect.class
+com\dxd\Service\BlogServiceImpl$2.class
 com\dxd\web\IndexController.class
 com\dxd\Dao\BlogRepository.class
 com\dxd\util\MarkdownUtils$CustomAttributeProvider.class
@@ -17,6 +18,7 @@ com\dxd\util\MyBeanUtils.class
 com\dxd\Interceptor\WebConfig.class
 com\dxd\web\admin\BlogController.class
 com\dxd\web\CommentController.class
+com\dxd\web\TypeShowController.class
 com\dxd\vo\BlogQuery.class
 com\dxd\Service\Blogservice.class
 com\dxd\Service\UserService.class
@@ -29,7 +31,10 @@ com\dxd\Dao\TagRepository.class
 com\dxd\web\admin\TypeController.class
 com\dxd\Interceptor\LoginInterceptor.class
 com\dxd\Service\CommentServiceImpl.class
+com\dxd\web\TagShowController.class
+com\dxd\web\ArchivesShowController.class
 com\dxd\aspect\LogAspect$RequestLog.class
+com\dxd\web\AboutShowController.class
 com\dxd\Service\BlogServiceImpl$1.class
 com\dxd\util\MarkdownUtils$1.class
 com\dxd\Service\TypeServiceImpl.class

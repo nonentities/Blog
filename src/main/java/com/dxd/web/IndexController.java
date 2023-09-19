@@ -1,11 +1,10 @@
 package com.dxd.web;
 
 
-import com.dxd.NotFoundException;
+
 import com.dxd.Service.Blogservice;
 import com.dxd.Service.TagService;
 import com.dxd.Service.TypeService;
-import com.dxd.vo.BlogQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -52,8 +51,17 @@ public class IndexController {
     }
 
     @GetMapping("/blog/{id}")
-    public String blog(@PathVariable Long id,Model model)  {
+    public String blog(@PathVariable Long id,Model model){
         model.addAttribute("blog",blogservice.getAndConvert(id));
         return "blog";
+    }
+
+
+    @GetMapping("/footer/newblog")
+    public String newblogs(Model model){
+
+        model.addAttribute("newblogs",blogservice.listRecommendBlogTop(3));
+        System.out.println("霓虹");
+        return "_fragments :: newblogList";
     }
 }

@@ -3,7 +3,7 @@ spring:
     mode: HTML
     prefix: classpath:/templates/
   profiles:
-    active: dev
+    active: pro
   jpa:
     hibernate:
       naming:

@@ -77,28 +77,30 @@
 						</div>
 					</div>
 					<!-- 赞赏 -->
-					<div class="ui center aligned basic segment">
-						<button id="payButton" class="ui orange basic circular button">
-							赞赏
-						</button>
-					</div>
-					<div class="ui payQ flowing popup  transition hidden">
-						<div class="ui orange basic label">
-							<div class="ui images" style="font-size: inherit !important; ">
-								<div class="image">
-									<img src="img/微信图片_20230815223846.jpg" th:src="@{/img/微信图片_20230815223846.jpg}" class="ui rounded bordered image" style="width: 120px;">
-									<div class="">
-										支付宝支付
+					<div th:if="${blog.appreciateFlag}">
+						<div class="ui center aligned basic segment">
+							<button id="payButton" class="ui orange basic circular button">
+								赞赏
+							</button>
+						</div>
+						<div class="ui payQ flowing popup  transition hidden">
+							<div class="ui orange basic label">
+								<div class="ui images" style="font-size: inherit !important; ">
+									<div class="image">
+										<img src="img/微信图片_20230815223846.jpg" th:src="@{/img/微信图片_20230815223846.jpg}" class="ui rounded bordered image" style="width: 120px;">
+										<div class="">
+											支付宝支付
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
 
+					</div>
 				</div>
 
 				<!-- 博客信息 -->
-				<div class="ui attached positive message">
+				<div class="ui attached positive message" th:if="${blog.copyrightFlag}">
 					<div class="ui middle aligned grid">
 						<div class="eleven wide column">
 							<ui class="list">
@@ -114,7 +116,7 @@
 					</div>
 				</div>
 				<!-- 留言区域 -->
-				<div  class="ui bottom attached segment">
+				<div  class="ui bottom attached segment" th:if="${blog.commentFlag}">
 					<div id="comment-container"  class="ui teal segment">
 						<div th:fragment="commentList">
 							<div class="ui threaded comments" style="max-width: 100%">
@@ -344,7 +346,8 @@
 				position:'left center'
 			})
 
-			var serurl="127.0.0.1:8080";
+			// var serurl="127.0.0.1:8080";
+			var serurl = /*[[#{blog.serurl}]]*/"127.0.0.1:8080";
 			var url=/*[[@{/blog/{id}(id=${blog.id})}]]*/"";
 			var qrcode=new QRCode("qrcode",{
 				// text:"http://jindo.dev.naver.com/collie",
