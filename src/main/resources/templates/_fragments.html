@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:fragment="head(title)">
-  <meta charset="UTF-8">
+  <!--  <meta charset="UTF-8">-->
+  <meta charset="text/html;charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title th:replace="${title}">博客详情</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
@@ -52,7 +53,7 @@
         </div>
       </div>
       <div class="three wide column" >
-        <h4 class="ui inverted header m-text-thin m-text-spaced " >最新博客</h4>
+        <h4 class="ui inverted header m-text-thin m-text-spaced" >最新博客</h4>
         <div id="newblog-container">
           <div class="ui inverted link list" th:fragment="newblogList">
             <a href="#" th:href="@{/blog/{id}(id=${blog.id})}" target="_blank" class="item m-text-thin" th:each="blog : ${newblogs}" th:text="${blog.title}">用户故事（User Story）</a>
@@ -72,11 +73,11 @@
       </div>
       <div class="seven wide column">
         <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
-        <p class="m-text-thin m-text-spaced m-opacity-mini" th:text="#{index.blogDescription}">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+        <p class="m-text-thin m-text-spaced m-opacity-mini" th:text="#{index.blogDescription}">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助</p>
       </div>
     </div>
     <div class="ui inverted section divider"></div>
-    <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2023 - <span th:text="${#dates.year(#dates.createNow())}">2017</span> Lirenmi Designed by Lirenmi</p>
+    <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2023 - <span th:text="${#dates.year(#dates.createNow())}">2017</span> Blog Designed by yearn</p>
   </div>
 
 </footer>
@@ -92,6 +93,8 @@
   <script>
     $('#newblog-container').load(/*[[@{/footer/newblog}]]*/"/footer/newblog");
   </script>
+
+
 </th:block>
 
 </body>

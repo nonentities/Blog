@@ -57,11 +57,16 @@ public class IndexController {
     }
 
 
-    @GetMapping("/footer/newblog")
-    public String newblogs(Model model){
-
-        model.addAttribute("newblogs",blogservice.listRecommendBlogTop(3));
-        System.out.println("霓虹");
-        return "_fragments :: newblogList";
-    }
+//    @GetMapping("/footer/newblog")
+//    public String newblogs(Model model){
+//
+//        model.addAttribute("newblogs",blogservice.listRecommendBlogTop(3));
+//        System.out.println("霓虹");
+//        return "_fragments :: newblogList";
+//    }
+@GetMapping("/footer/newblog")
+public String newblogs(Model model) {
+    model.addAttribute("newblogs", blogservice.listRecommendBlogTop(3));
+    return "_fragments :: newblogList";
+}
 }
